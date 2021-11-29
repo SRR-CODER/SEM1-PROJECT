@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background: url("background2.gif") no-repeat;
+            background-size:cover;
+        }
+        .image{border-style: inset;border-width:5px; border-color:white;
+        }
+        .time{
+            float: right;
+        }
+        p{
+            color:white;
+            text-shadow:2px 2px 3px tomato;
+        }
+        .deco{
+            background-color:tomato;
+        }
+    </style>
+    <script language="javascript">
+        var count=0;
+        function hi()
+        {
+            count++;
+            document.getElementById("score").innerText=count;
+        }
+        function start()
+        {
+            var name=prompt("What is your name:");
+            alert("Hi "+name+" welcome to this detective agency as it is your very first day it will be very light exercise for you, you just need to inspect a site which is made ready for you and follow the instructions given there.ALL THE BEST");
+        }
+    </script>
+    <script src="ext.js"></script>
+</head>
+<body onload="start()" onload="timer()">
+    <div class="deco"><label><b>SCORE </b></label><span style="font-family: calibri; color: black;" id="score"></span><div class="time"><label><b>TIMER</b></label><span style="font-family: calibri; color: black;" id="tmr"></span></div></div><hr>
+    <img src="game.jpg" usemap="#image" align="center" class="image" id="pictue">
+    <map name="image">
+    <area onclick="hi(); this.onclick=null;" shape="poly" title="baloon" coords="40,21,32,28,21,39,12,47,2,63,2,78,1,101,1,109,9,120,16,126,27,133,35,135,46,137,56,133,63,129,74,123,80,117,85,108,89,94,89,84,84,66,76,53,65,42,54,32,46,24">
+    <area onclick="hi(); this.onclick=null;" shape="poly" title="feather" coords="60,275,55,279,49,286,47,295,46,305,46,317,46,325,46,333,51,341,58,336,66,332,70,323,72,311,71,294,67,282">
+    <area onclick="hi(); this.onclick=null;" shape="poly" title="toycanon" coords="601,146,594,138,595,127,595,118,588,114,591,106,598,97,607,94,615,95,622,103,619,114,626,119,628,129,628,141,623,145,615,146,608,146">
+    <area onclick="hi(); this.onclick=null;" shape="poly" title="tennis ball" coords="247,331,248,323,242,318,233,314,224,315,218,320,216,329,220,335,229,335,237,337,244,336">
+    <area onclick="hi(); this.onclick=null;" shape="poly" title="lollipop" coords="125,180,131,175,139,173,146,175,149,181,151,187,159,188,147,192,140,197,131,194,125,188">
+    <area onclick="hi(); this.onclick=null;" shape="poly" title="ball" coords="569,102,545,99,528,95,528,82,532,69,521,55,527,41,544,29,562,27,580,31,592,43,599,58,601,71,596,85,588,92,580,97">
+    <area onclick="hi(); this.onclick=null;" shape="poly" title="baseball bat" coords="96,105,94,132,112,135,127,133,156,136,180,137,213,136,242,137,260,137,276,135,289,135,291,127,262,127,247,126">
+    </map>
+    <br><br><br>
+    <p><b>Welcome to Missing Object game.You have to find the listed objects in the picture.Click one object only once multiple clicks won't increase the score, so avoid multiple clicks.</b></p>
+    <p><b>1.BALOON  2.FEATHER  3.TOYCANON  4.TENNIS BALL  5.LOLLIPOP  6.BALL  7.BASEBALL BAT</b></p>
+    <p><b>All the Best</b></p>
+</body>
+</html>
